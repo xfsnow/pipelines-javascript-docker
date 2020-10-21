@@ -1,19 +1,19 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: xfsnowpipelinesjavascriptdocker 
+  name: helloworld
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: xfsnowpipelinesjavascriptdocker
+      app: helloworld
   template:
     metadata:
       labels:
-        app: xfsnowpipelinesjavascriptdocker 
+        app: helloworld
     spec:
       containers:
-        - name: xfsnowpipelinesjavascriptdocker 
-          image: mythcr.azurecr.io/xfsnowpipelinesjavascriptdocker
+        - name: helloworld
+          image: acrhelloworld.azurecr.cn/helloworld:v1
           ports:
           - containerPort: 8080
