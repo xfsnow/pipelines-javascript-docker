@@ -76,4 +76,16 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
+          - task: Kubernetes@1
+            name: rollout_undo
+            condition: failed()
+            inputs:
+              connectionType: 'Kubernetes Service Connection'
+              kubernetesServiceEndpoint: 'test'
+              namespace: 'default'
+              command: rollout
+              arguments: undo deployment/$(apply.KubectlOutput)
+              secretType: 'dockerRegistry'
+              containerRegistryType: 'Azure Container Registry'
+                  
 
