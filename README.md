@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/netmyth/netmyth/_apis/build/status/xfsnow.pipelines-javascript-docker?branchName=master)](https://dev.azure.com/netmyth/netmyth/_build/latest?definitionId=17&branchName=master)
 
 # Contributing
 
