@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: helloworld
-          image: acrhelloworld.azurecr.cn/helloworld:v1
+          image: snowpeak.azurecr.cn/helloworld
           ports:
           - containerPort: 8080
