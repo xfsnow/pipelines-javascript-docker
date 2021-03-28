@@ -1,3 +1,5 @@
+# hellowworld 容器，用于 AKS 可用性演示
+
 FROM node:8
 
 WORKDIR /usr/src/app
